@@ -8,13 +8,34 @@
     android:id="@+id/mainLayout"
     tools:context=".MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#5D3FD3"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="MAD_Practical2"
+            android:textColor="#FFFFFF"
+
+            android:textSize="30sp" />
+
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textStyle="italic"
-        android:textColor="@color/black"
-        android:textSize="40dp"
+        android:textStyle="italic|bold"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

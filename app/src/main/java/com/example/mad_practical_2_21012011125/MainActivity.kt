@@ -9,7 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     val TAG="MainActivity"
-    val v=findViewById<ConstraintLayout>(R.id.mainLayout)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,10 +41,15 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         showMessage("OnDestroy() method is called")
     }
+
+    override fun onRestart() {
+        super.onRestart()
+        showMessage("OnRestart() method is called")
+    }
     fun showMessage(msg:String){
         Log.i(TAG, "$msg")
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-
+        val v=findViewById<ConstraintLayout>(R.id.mainLayout)
         if(v!=null){
             Snackbar.make(v,msg,Snackbar.LENGTH_SHORT).show()
         }
