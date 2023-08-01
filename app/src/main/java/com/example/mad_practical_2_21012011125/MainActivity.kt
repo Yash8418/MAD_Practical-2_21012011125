@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         showMessage("OnDestroy() method is called")
     }
-
     override fun onRestart() {
         super.onRestart()
         showMessage("OnRestart() method is called")
